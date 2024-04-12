@@ -19,8 +19,9 @@ public class MultiCubes : MonoBehaviour
 
     private int _divisor = 2;
     private int _precent = 100;
+    private int _precentChanged = 100;
 
-    private List<Color> _colors = new List<Color> 
+    private List<Color> _colors = new List<Color>
     {
         Color.red,
         Color.white,
@@ -55,13 +56,14 @@ public class MultiCubes : MonoBehaviour
 
     private void Clicked()
     {
-        int precent = 100;
-        int randomPrecentValue = GetUserRandom(precent);
+        int randomPrecentValue = GetUserRandom(_precent);
+        Debug.Log("дн " + _precentChanged);
 
-        if (randomPrecentValue >= _precent || precent == _precent)
+        if (randomPrecentValue <= _precentChanged || _precentChanged == _precent)
         {
             CreateCube();
-            _precent /= _divisor;
+            _precentChanged /= _divisor;
+            Debug.Log("оняке " + _precentChanged);
         }
 
         Destroy(this.gameObject);
@@ -84,12 +86,12 @@ public class MultiCubes : MonoBehaviour
     {
         int cubesCount = GetUserRandom(_minNumbersOfCubes, _maxNumbersOfCubes);
 
-        Vector3 newScale = _scale / _divisor;
-        transform.localScale = newScale;
+        _maxScale /= _divisor;
+        _scale = new Vector3(_maxScale, _maxScale, _maxScale);
 
         for (int i = 0; i < cubesCount; i++)
         {
-            _prefabCube.transform.localScale = newScale;
+            _prefabCube.transform.localScale = _scale;
             Instantiate(_prefabCube, this.gameObject.transform.position, Quaternion.identity);
             _meshRenderer.material.color = TryGetRandomColor();
 
