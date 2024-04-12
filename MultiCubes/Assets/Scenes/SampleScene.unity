@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
       propertyPath: _maxScale
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
       propertyPath: _clickObject
