@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Downloads\\MultiCubes-main\\MultiCubes-main\\MultiCubes\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F56FE7FB-B90F-0A0D-E7B9-B9477882B78C}|Assembly-CSharp.csproj|c:\\users\\admin\\downloads\\multicubes-main\\multicubes-main\\multicubes\\assets\\scripts\\multicubes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F56FE7FB-B90F-0A0D-E7B9-B9477882B78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\multicubes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F56FE7FB-B90F-0A0D-E7B9-B9477882B78C}|Assembly-CSharp.csproj|C:\\Users\\Admin\\Downloads\\MultiCubes-main\\MultiCubes-main\\MultiCubes\\assets\\scripts\\interactionwithobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F56FE7FB-B90F-0A0D-E7B9-B9477882B78C}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\interactionwithobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "InteractionWithObject.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\MultiCubes-main\\MultiCubes-main\\MultiCubes\\Assets\\Scripts\\InteractionWithObject.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\InteractionWithObject.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\MultiCubes-main\\MultiCubes-main\\MultiCubes\\Assets\\Scripts\\InteractionWithObject.cs",
+              "RelativeToolTip": "Assets\\Scripts\\InteractionWithObject.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T09:23:19.951Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MultiCubes.cs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Downloads\\MultiCubes-main\\MultiCubes-main\\MultiCubes\\Assets\\Scripts\\MultiCubes.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MultiCubes.cs",
+              "ToolTip": "C:\\Users\\Admin\\Downloads\\MultiCubes-main\\MultiCubes-main\\MultiCubes\\Assets\\Scripts\\MultiCubes.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MultiCubes.cs",
+              "ViewState": "AQIAAC0AAAAAAAAAAAAQwFcAAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-12T09:22:57.975Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
