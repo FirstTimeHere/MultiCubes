@@ -14,12 +14,16 @@ public class MultiCubes : MonoBehaviour
     [SerializeField] private int _minNumbersOfCubes;
     [SerializeField] private int _maxNumbersOfCubes;
 
-    [SerializeField] [Range(1,100)] private float _maxScale;
+    [SerializeField][Range(1, 100)] private float _maxScale;
 
     private Vector3 _scale;
 
+    private GameObject _gameObject;
+    private GameManager _gameManager;
+
     private int _divisor = 2;
-    private int _precent = 100;
+    private int _precentRandom = 100;
+    private float _precentChanged;
 
     private List<Color> _colors = new List<Color>
     {
@@ -38,10 +42,11 @@ public class MultiCubes : MonoBehaviour
     {
         _rigidbody = GetComponent<Rigidbody>();
         _meshRenderer = GetComponent<MeshRenderer>();
+        _gameObject = GameObject.Find(nameof(GameManager));
+        _gameManager = _gameObject.GetComponent<GameManager>();
 
         _scale = new Vector3(_maxScale, _maxScale, _maxScale);
         transform.localScale = _scale;
-        _maxNumbersOfCubes++;
     }
 
     private void OnEnable()
@@ -56,18 +61,15 @@ public class MultiCubes : MonoBehaviour
 
     private void Clicked()
     {
-        float precentChanged = 100;
-        float randomPrecentValue = GetUserRandom(_precent);
-        Debug.Log("дн " + precentChanged);
+        float randomPrecentValue = GetUserRandom(_precentRandom);
+        _precentChanged = _gameManager.GetPrecent();
 
-        if (randomPrecentValue <= precentChanged)
+        if (randomPrecentValue <= _precentChanged)
         {
             CreateCube();
-            precentChanged /= _divisor;
-            Debug.Log("оняке " + precentChanged);
         }
 
-        Destroy(this.gameObject);
+        Destroy(gameObject);
     }
 
     private int GetUserRandom(int maxRandomValue, int minRandomValue = 0)
@@ -90,13 +92,11 @@ public class MultiCubes : MonoBehaviour
         _maxScale /= _divisor;
         _scale = new Vector3(_maxScale, _maxScale, _maxScale);
 
-        for (int i = 1; i < cubesCount; i++)
+        for (int i = 0; i < cubesCount; i++)
         {
             _prefabCube.transform.localScale = _scale;
             _meshRenderer.material.color = TryGetRandomColor();
-            Instantiate(_prefabCube, this.gameObject.transform.position, Quaternion.identity);
-
-            _rigidbody.AddForce(this.gameObject.transform.position, ForceMode.Acceleration);
+            Instantiate(_prefabCube, transform.position, Quaternion.identity);
         }
     }
 
