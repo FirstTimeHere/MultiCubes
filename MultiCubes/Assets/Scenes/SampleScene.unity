@@ -376,6 +376,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
+      propertyPath: _click
+      value: 
+      objectReference: {fileID: 1313998070}
+    - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
       propertyPath: _precent
       value: 
       objectReference: {fileID: 0}
@@ -666,6 +670,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
+      propertyPath: _click
+      value: 
+      objectReference: {fileID: 1452951549}
+    - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
       propertyPath: _precent
       value: 
       objectReference: {fileID: 0}
@@ -727,8 +735,8 @@ GameObject:
   - component: {fileID: 1869831026}
   - component: {fileID: 1869831027}
   m_Layer: 0
-  m_Name: GameManager
-  m_TagString: Untagged
+  m_Name: Variables
+  m_TagString: LocalVariables
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -808,6 +816,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
+      propertyPath: _click
+      value: 
+      objectReference: {fileID: 1036917312}
     - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
       propertyPath: _precent
       value: 
@@ -907,6 +919,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
+      propertyPath: _click
+      value: 
+      objectReference: {fileID: 813796470}
     - target: {fileID: 1858781400590862467, guid: e20087ea0ca7b744b8f03186299bf182, type: 3}
       propertyPath: _precent
       value: 

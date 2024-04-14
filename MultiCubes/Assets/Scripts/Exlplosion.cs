@@ -6,16 +6,16 @@ public class Exlplosion : MonoBehaviour
     [SerializeField] private float _explosionRadius;
     [SerializeField] private float _explosionForce;
     [SerializeField] private ParticleSystem _effect;
-    [SerializeField] private InteractionWithObject _clickObject;
+    [SerializeField] private ClickHandler _clickObject;
 
     private void OnEnable()
     {
-        _clickObject.ClickedObject += ExplodeWithEvent;
+        _clickObject.Click += ExplodeWithEvent;
     }
 
     private void OnDisable()
     {
-        _clickObject.ClickedObject -= ExplodeWithEvent;
+        _clickObject.Click -= ExplodeWithEvent;
     }
 
     private void ExplodeWithEvent()
