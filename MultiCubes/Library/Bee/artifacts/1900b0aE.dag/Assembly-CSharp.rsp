@@ -360,7 +360,6 @@
 "Assets/Scripts/ClickHandler.cs"
 "Assets/Scripts/Cubes.cs"
 "Assets/Scripts/Exlplosion.cs"
-"Assets/Scripts/PrecentChanger.cs"
 -langversion:9.0
 
 /deterministic
