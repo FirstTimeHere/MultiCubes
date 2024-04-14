@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using UnityEngine;
-//using Random = System.Random;
 
 [RequireComponent(typeof(Rigidbody))]
 
@@ -25,25 +24,18 @@ public class MultiCubes : MonoBehaviour
     private int _precentRandom = 100;
     private float _precentChanged;
 
-    private List<Color> _colors = new List<Color>
-    {
-        Color.red,
-        Color.white,
-        Color.blue,
-        Color.green,
-        Color.gray
-    };
-
     private Rigidbody _rigidbody;
     private MeshRenderer _meshRenderer;
-    //private Random _random;
 
     private void Start()
     {
-        _rigidbody = GetComponent<Rigidbody>();
-        _meshRenderer = GetComponent<MeshRenderer>();
         _gameObject = GameObject.Find(nameof(GameManager));
+
+        _rigidbody = GetComponent<Rigidbody>();
         _gameManager = _gameObject.GetComponent<GameManager>();
+        _meshRenderer = GetComponent<MeshRenderer>();
+
+        _meshRenderer.material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
         _scale = new Vector3(_maxScale, _maxScale, _maxScale);
         transform.localScale = _scale;
@@ -75,14 +67,6 @@ public class MultiCubes : MonoBehaviour
     private int GetUserRandom(int maxRandomValue, int minRandomValue = 0)
     {
         return Random.Range(minRandomValue, maxRandomValue);
-        //return _random.Next(minRandomValue, maxRandomValue);
-    }
-
-    private Color TryGetRandomColor()
-    {
-        int randomColor = GetUserRandom(_colors.Count);
-
-        return _colors[randomColor];
     }
 
     private void CreateCube()
@@ -95,7 +79,7 @@ public class MultiCubes : MonoBehaviour
         for (int i = 0; i < cubesCount; i++)
         {
             _prefabCube.transform.localScale = _scale;
-            _meshRenderer.material.color = TryGetRandomColor();
+
             Instantiate(_prefabCube, transform.position, Quaternion.identity);
         }
     }
