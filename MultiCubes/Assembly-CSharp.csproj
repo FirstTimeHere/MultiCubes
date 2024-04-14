@@ -63,8 +63,8 @@
     <Compile Include="Assets\Scripts\Cubes.cs" />
     <Compile Include="Assets\Scripts\ClickHandler.cs" />
     <Compile Include="Assets\Fx Explosion Pack\Script\csMouseOrbit.cs" />
+    <Compile Include="Assets\Scripts\PrecentChanger.cs" />
     <Compile Include="Assets\Fx Explosion Pack\Script\DestroyEffect.cs" />
-    <Compile Include="Assets\Scripts\LocalVariables.cs" />
     <Compile Include="Assets\Fx Explosion Pack\Script\csLightControl.cs" />
     <Compile Include="Assets\Scripts\Exlplosion.cs" />
   </ItemGroup>

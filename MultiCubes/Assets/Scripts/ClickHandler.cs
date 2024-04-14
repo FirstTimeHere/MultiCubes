@@ -3,10 +3,10 @@ using UnityEngine;
 
 public class ClickHandler : MonoBehaviour
 {
-    public event Action Click;
+    public event Action Clicked;
 
     private void OnMouseDown()
     {
-        Click?.Invoke();
+        Clicked?.Invoke();
     }
 }

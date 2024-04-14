@@ -10,15 +10,15 @@ public class Exlplosion : MonoBehaviour
 
     private void OnEnable()
     {
-        _clickObject.Click += ExplodeWithEvent;
+        _clickObject.Clicked += OnExplode;
     }
 
     private void OnDisable()
     {
-        _clickObject.Click -= ExplodeWithEvent;
+        _clickObject.Clicked -= OnExplode;
     }
 
-    private void ExplodeWithEvent()
+    private void OnExplode()
     {
         Explode();
         Instantiate(_effect,transform.position, transform.rotation);
@@ -26,13 +26,13 @@ public class Exlplosion : MonoBehaviour
 
     private void Explode()
     {
-        foreach (Rigidbody explodableObject in GetExplodableObject())
+        foreach (Rigidbody explodableObject in GetExplodableObjects())
         {
             explodableObject.AddExplosionForce(_explosionForce, transform.position, _explosionRadius);
         }
     }
 
-    private List<Rigidbody> GetExplodableObject()
+    private List<Rigidbody> GetExplodableObjects()
     {
         Collider[] hits = Physics.OverlapSphere(transform.position, _explosionRadius);
 
